@@ -7,6 +7,8 @@ Go to https://colab.research.google.com/.
 
 When opening a notebook, enter the url for this repo as shown in the image below. The most up-to-date version of the notebook will be the Primary Notebook.
 
+**If you'd like to start from a blank notebook, open Untitled0.ipynb**
+
 ![image](https://github.com/bbonifacio-at-mudd/E208_Final/assets/114462423/1236da58-bed0-4ac3-ba1b-aa584b07493d)
 
 
