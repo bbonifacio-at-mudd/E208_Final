@@ -1,6 +1,6 @@
-# E208_Final
-Brandon Bonifacio and Viviane Solomon's Final Project for Jedi Machine Learning (ENGR208). 
+# Brandon Bonifacio and Viviane Solomon's Final Project for Jedi Machine Learning (ENGR208). 
 
+## Instructions for Working/Running the Code
 
 How to open notebook in google collab:
 Go to https://colab.research.google.com/. 
