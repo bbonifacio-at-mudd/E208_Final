@@ -1,5 +1,5 @@
 # E208_Final
-E208 Final Project Repo
+Brandon Bonifacio and Viviane Solomon's Final Project for Jedi Machine Learning (ENGR208). 
 
 
 How to open notebook in google collab:
@@ -11,4 +11,3 @@ When opening a notebook, enter the url for this repo as shown in the image below
 
 
 
-Brandon Bonifacio and Viviane Solomon's final project for Jedi Machine Learning (ENGR208). 
