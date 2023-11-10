@@ -13,6 +13,8 @@ When opening a notebook, enter the url for this repo as shown in the image below
 
 After you open the Primary notebook, there's one more step in order to save any changes you make. Hit **File** and then **Save to Github** as shown below. 
 You have a choice to either overwrite the current **Primary Notebook** or to save your changes to a new notebook. Do whichever is appropriate. 
+But as a general rule of thumb, if you were just experimenting with changing stuff, save it to a new notebook. If your changes are significant, clean, and 
+are appropriate for future notebooks to be branched from, overwrite the Primary Notebook. 
 
 
 
