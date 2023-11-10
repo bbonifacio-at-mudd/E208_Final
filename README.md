@@ -7,7 +7,8 @@ Go to https://colab.research.google.com/.
 
 When opening a notebook, enter the url for this repo as shown in the image below. The most up-to-date version of the notebook will be the Primary Notebook.
 
-![image](https://github.com/bbonifacio-at-mudd/E208_Final/assets/114462423/720dc3cb-e3c2-445e-9bf7-7fb40c5f2749)
+![image](https://github.com/bbonifacio-at-mudd/E208_Final/assets/114462423/1236da58-bed0-4ac3-ba1b-aa584b07493d)
+
 
 
 After you open the Primary notebook, there's one more step in order to save any changes you make. Hit **File** and then **Save to Github** as shown below. 
