@@ -1,1 +1,105 @@
 keep notes here if we want
+
+
+
+
+The .json file has the following format: 
+https://github.com/agentmorris/MegaDetector/blob/main/data_management/README.md#coco-camera-traps-format
+
+{
+  "info" : info,
+  "images" : [image],
+  "categories" : [category],
+  "annotations" : [annotation]
+}
+
+
+
+info 
+{
+  ## Required ##
+
+  "version" : str,
+  "description" : str,
+  
+  ## Optional ##
+
+  "year" : int,
+  "contributor" : str
+  "date_created" : datetime
+}
+
+image
+{
+  ## Required ##
+
+  "id" : str,
+  "file_name" : str,
+  
+  ## Optional ##
+
+  "width" : int,
+  "height" : int,
+  "rights_holder" : str,    
+
+  # Precise date formats have varied a little across datasets, the spirit is
+  # "any obvious format that dateutil knows how to parse".  Going forward,
+  # we are using Python's standard string representation for datetimes, which
+  # looks like: 
+  #
+  # 2022-12-31 09:52:50
+  "datetime": datetime,  
+
+  # A unique identifier for the sequence (aka burst, episode, or event) to 
+  # which this image belongs
+  "seq_id": str,
+
+  # The total number of images in this event
+  "seq_num_frames": int,
+
+  # The zero-indexed index of this image within this event
+  "frame_num": int
+  
+  # This is an int in older data sets, but convention is now strings
+  "location": str,
+  
+  # Image corruption is quite common in camera trap images, and throwing out corrupt
+  # images in database assembly is "dodging part of the problem".  Wherever possible,
+  # use this flag to indicate that an image failed to load, e.g. in PIL and/or TensorFlow.
+  "corrupt": bool
+}
+
+category
+{
+  ## Required ##
+  
+  # Category ID 0 reserved for the class "empty"; all other categories vary by data
+  # set.  Non-negative integers only.
+  "id" : int,
+
+  # Can be any string, but if the category indicates empty, the standard is "empty"
+  # (as opposed to "blank", "false trigger", "none", "misfire", etc.). 
+  #
+  # Lower-case names without spaces are encouraged, but not required.  I.e., all other
+  # things being equal, use "gray_wolf" rather than "Gray Wolf".
+  "name" : str  
+}
+
+annotation
+{
+  ## Required ##
+
+  "id" : str,
+  "image_id" : str,  
+  "category_id" : int,
+  
+  ## Optional ##
+  
+  # These are in absolute, floating-point coordinates, with the origin at the upper-left
+  "bbox": [x,y,width,height],
+  
+  # This indicates that this annotation is really applied at the *sequence* level,
+  # and may not be reliable at the individual-image level.  Since the *sequences* are
+  # the "atom of interest" for most ecology applications, this is common.
+  "sequence_level_annotation" : bool
+}
