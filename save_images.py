@@ -25,11 +25,15 @@ for index, row in df.iterrows():
     count +=1
     if count >4000:
         break
+    if count < 400:
+        continue
     #Get the quadratid
     quadratid = row['quadratid']
     img = Image.open('Original_Data/PAC_TWN/' + str(quadratid) + '.jpg')
     label = row['func_group']
-    print(label)
+
+    if index % 10 == 0:
+        print(index)
     plt.imshow(img)
     #Get the coordinates
     y = row['y']
