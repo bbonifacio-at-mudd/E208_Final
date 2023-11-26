@@ -23,16 +23,14 @@ df = pd.read_csv('annotations_PAC_TWN.csv')
 count = 0
 for index, row in df.iterrows():
     count +=1
-    if count >4000:
-        break
-    if count < 400:
+    if count < 449935:
         continue
     #Get the quadratid
     quadratid = row['quadratid']
     img = Image.open('Original_Data/PAC_TWN/' + str(quadratid) + '.jpg')
     label = row['func_group']
 
-    if index % 10 == 0:
+    if index % 100 == 0:
         print(index)
     plt.imshow(img)
     #Get the coordinates
@@ -41,10 +39,12 @@ for index, row in df.iterrows():
     #Crop the image using the coordinates and height and width
     img_cropped = img.crop((x-122, y-122, x+122, y+122))
     #Save the cropped image as panda_cropped.jpg
-    img_cropped.save('Cropped_Data_4000/'+label+'/'+str(quadratid)+str(x)+str(y)+'.jpg')
+    img_cropped.save('Cropped_Data_50000/'+label+'/'+str(quadratid)+str(x)+str(y)+'.jpg')
     #Display the cropped image
     #plt.imshow(img_cropped)
     #plt.show()
+
+
 
 
 
