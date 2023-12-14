@@ -1,6 +1,12 @@
 #Manual Folders
 Cropped_Data_50000/
-
+All_Labels_4000/
+Automatic Data Cleaning/
+Cropped_Data_400/
+Cropped_Data_4000_Invertebrates/
+Cropped_Data_4000_Other/
+Cropped_Data_400_Other/
+Original_Data/
 
 
 # Byte-compiled / optimized / DLL files
